@@ -1,9 +1,9 @@
 # fork and credits go to CryptoHawaii Pepe/Meme Coin Docker 
 # original github: https://github.com/CryptoHawaii-com/pepecoin-Dockerfiles
-# Modified to work with Lunarium ( Currently Solarium(SLRC) community coin)
+# Modified to work with Dextro ( Currently dextro(SLRC) community coin)
 
 ### Details:
-Lunarium Master Node - Ideally this is run on 2 CPU(s).
+Dextro Master Node - Ideally this is run on 2 CPU(s).
 
 What the script does: 
 
@@ -35,34 +35,26 @@ ssh to server and run
 
 Install withOUT SWAP
 ```
-bash -c "$(wget -O - https://raw.githubusercontent.com/telostia/Lunarium-masternode-docker/master/install.sh)"
+bash -c "$(wget -O - https://raw.githubusercontent.com/telostia/Dextro-masternode-docker/master/install.sh)"
 ```
 
 Install with SWAP
 ```
-bash -c "$(wget -O - https://raw.githubusercontent.com/telostia/Lunarium-masternode-docker/master/createswap.sh)" && bash -c "$(wget -O - https://raw.githubusercontent.com/telostia/Lunarium-masternode-docker/master/install.sh)"
+bash -c "$(wget -O - https://raw.githubusercontent.com/telostia/Dextro-masternode-docker/master/createswap.sh)" && bash -c "$(wget -O - https://raw.githubusercontent.com/telostia/Dextro-masternode-docker/master/install.sh)"
 ```
 
-Installation time takes approx 20 minutes, Solariumd will be compiled from the latest git pull, this part can be slow.
+Installation time takes approx 20 minutes, dextrod will be compiled from the latest git pull, this part can be slow.
 Once the installation is completed you will have 1 running docker container. The name of the container is "solarium"
-
-`docker ps` 
-
-output will look similar to this:
-
-```f93f055fd7d7        solarium             "/bin/sh -c '/root..."   19 hours ago        Up 3 hours          0.0.0.0:29377->29377/tcp   solarium```
-
-**Required** 
 
 You must now activate your master node or manually stop the webserver.
 
 Activating your master node is very simple. 
 When generating your masternodeprivkey configuration you will need the following details:
-We will be using port 4848 for the master node since 29377 is in use for the seed node
+We will be using port 39320 for the master node.
 
 ***serverip = your.server.ip.address***
 
-***serverport = 4848***
+***serverport = 39320***
 
 Browse to your servers ip address with https://
 
@@ -80,7 +72,7 @@ check that both containers are now running
 
 output will look similar to this:
 ```
-ca1e93f6e569        solmn   "/root/.solarium/Sol…"   21 minutes ago      Restarting (127) 52 seconds ago                       solarium
+ca1e93f6e569        solmn   "/root/.dextro/dext…"   21 minutes ago      Restarting (127) 52 seconds ago                       dextro
 ```
 *OPTIONAL: If you are not a master node STOP the webserver*
 
@@ -99,7 +91,7 @@ We hope you choose to run a master node.
 ### Command Line Usage
 
 The following commands assume you have basic linux knowledge and have an ssh connection already established to your server. 
-There are 2 docker containers running: *solarium* and *solmn*
+There are 1 docker containers running: *dextromasternode*
 
 **List running containers**
 
@@ -109,31 +101,31 @@ There are 2 docker containers running: *solarium* and *solmn*
 
 `docker exec -it CONTAINERNAME bash`
 
-where CONTAINERNAME is `solarium` or `solmn` (i.e. `docker exec -it solmn bash`)
+where CONTAINERNAME is `dextro` or `solmn` (i.e. `docker exec -it solmn bash`)
 
 you will see a new root prompt once in the container 
 example output:
 ```
-root@localhost:~# docker exec -it solarium bash
+root@localhost:~# docker exec -it dextro bash
 root@f93f055fd7d7:/#
 ```
 
-**solariumd commands in container**
+**dextrod commands in container**
 
-Execute solariumd commands within a container like this
+Execute dextrod commands within a container like this
 
-`/root/.solarium/solariumd COMMAND`
+`/root/.dextro/dextrod COMMAND`
 
 for example
 
-`/root/.solarium/solariumd getinfo`
+`/root/.dextro/dextrod getinfo`
 
-All files are located in /root/.solarium on each node
-solarium.conf is located /root/.solarium/pepcoin.conf
+All files are located in /root/dextro on each node
+dextro.conf is located /root/.dextro/dextro.conf
 
 If you found this helpful don't be shy to donate:
 
-solarium/slrc : 
+dextro/dxo : 
 
 BTC : 
 
