@@ -4,36 +4,35 @@ while inotifywait -e modify /var/www/masternodeprivkey/masternodeprivkey.txt; do
   USERNAME=$(pwgen -s 16 1)
   PASSWORD=$(pwgen -s 64 1)
   MASTERNODEPRIVKEY=$(</var/www/masternodeprivkey/masternodeprivkey.txt)
-  echo "rpcuser=$USERNAME" >/root/Solarium.conf
-  echo "rpcpassword=$PASSWORD" >>/root/Solarium.conf
-  echo "server=1" >>/root/Solarium.conf
-  echo "listen=1" >>/root/Solarium.conf
-  echo "port=4848" >>/root/Solarium.conf
-  echo "rpcport=4141" >>/root/Solarium.conf
-  echo "addnode=80.211.30.202" >>/root/Solarium.conf
-  echo "addnode=195.181.216.245" >>/root/Solarium.conf
-  echo "addnode=217.61.106.97" >>/root/Solarium.conf
-  echo "addnode=159.89.127.38" >>/root/Solarium.conf
-  echo "addnode=159.203.26.237" >>/root/Solarium.conf
-  echo "addnode=167.99.148.87" >>/root/Solarium.conf
-  echo "addnode=159.65.9.95" >>/root/Solarium.conf
-  echo "addnode=167.99.44.218" >>/root/Solarium.conf
-  echo "addnode=178.62.89.167" >>/root/Solarium.conf
-  echo "addnode=159.89.29.101" >>/root/Solarium.conf
-  echo "maxconnections=16" >>/root/Solarium.conf
-  echo "masternodeprivkey=$MASTERNODEPRIVKEY" >>/root/Solarium.conf
-  echo "masternode=1" >>/root/Solarium.conf
-  echo "masternodeaddr=$IP:4848" >>/root/Solarium.conf
-  #docker stop solariummasternode
-  docker run -d --name solariummasternode solariummasternode
-  docker cp /root/Solarium.conf solariummasternode:/root/.Solarium/
-  docker cp /root/solarium/Solariumd solariummasternode:/root/solarium
-  docker commit solariummasternode solariummasternode
-  docker container rm solariummasternode
-  echo 'hello'
-  docker run -d --restart always -p 4848:4848 --name solariummasternode solariummasternode /root/solarium/Solariumd -datadir=/root/.Solarium -conf=/root/.Solarium/Solarium.conf
-  #docker stop solariummasternode
-  docker start solariummasternode
+  echo "rpcallowip=127.0.0.1">/root/dextro.conf
+  echo "rpcuser=$USERNAME" >/root/dextro.conf
+  echo "rpcpassword=$PASSWORD" >>/root/dextro.conf
+  echo "server=1" >>/root/dextro.conf
+  echo "listen=1" >>/root/dextro.conf
+  echo "port=39320" >>/root/dextro.conf
+  echo "rpcport=4141" >>/root/dextro.conf
+  echo "addnode=seed1.dextro.io" >>/root/dextro.conf
+  echo "addnode=seed2.dextro.io" >>/root/dextro.conf
+  echo "addnode=seed3.dextro.io" >>/root/dextro.conf
+  echo "addnode=seed4.dextro.io" >>/root/dextro.conf
+  echo "addnode=seed5.dextro.io" >>/root/dextro.conf
+  echo "addnode=seed6.dextro.io" >>/root/dextro.conf
+  echo "addnode=seed7.dextro.io" >>/root/dextro.conf
+  echo "addnode=seed8.dextro.io" >>/root/dextro.conf
+  echo "maxconnections=16" >>/root/dextro.conf
+  echo "masternodeprivkey=$MASTERNODEPRIVKEY" >>/root/dextro.conf
+  echo "masternode=1" >>/root/dextro.conf
+  echo "masternodeaddr=$IP:39320" >>/root/dextro.conf
+  #docker stop dextromasternode
+  docker run -d --name dextromasternode dextromasternode
+  docker cp /root/dextro.conf dextromasternode:/root/.dextro/
+  docker cp /root/dextro/dextrod dextromasternode:/root/dextro/
+  docker commit dextromasternode dextromasternode
+  docker container rm dextromasternode
+  echo 'loading master node...'
+  docker run -d --restart always -p 39320:39320 --name dextromasternode dextromasternode /root/dextro/dextrod -daemon -datadir=/root/.dextro -conf=/root/.dextro/dextro.conf
+  #docker stop dextromasternode
+  docker start dextromasternode
   systemctl stop apache2
   systemctl disable apache2
   ufw delete allow 443/tcp
