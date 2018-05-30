@@ -16,13 +16,15 @@ This will create (1) master node and (1) seed node:
 
 *all rewards goto you for helping out with the seeding. 
 
-https://www.youtube.com/watch?v=yOjFrc1UXTc&feature=youtu.be
-
+##[[
+	original youtube from peepcoin with same concept
+	https://www.youtube.com/watch?v=yOjFrc1UXTc&feature=youtu.be
+##]]
 What you need to do (general overview):
 
 1. Wallet - create master node - IP of your node:4848 
-2. Fund the received address with 5,000 coins (it may or may not charge you) it'll be live after 15 confirmations. 
-  - Send EXACTLY 5,000 coins - otherwise you will get errors. (our video walk through was wrong to send 5,010 coins)
+2. Fund the received address with 1,000 coins (it may or may not charge you) it'll be live after 15 confirmations. 
+  - Send EXACTLY 1,000 coins - otherwise you will get errors. (our video walk through was wrong to send 1,010 coins)
 3. Get config and input in the 1-time entry URL @ the IP of your server
    - After you input the key the website will never work again (if you make a mistake you'll have to reinstall)
 4. Click on your MN to start receiving payments.
