@@ -127,7 +127,7 @@ dextro.conf is located /root/.dextro/dextro.conf
 
 If you found this helpful don't be shy to donate:
 
-dextro/dxo : 
+dextro/dxo : DF76CS4fGT3okKvCSjwqoG4BjAnvSwrz9M
 
 BTC : 
 
