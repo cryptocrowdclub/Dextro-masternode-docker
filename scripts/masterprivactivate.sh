@@ -4,13 +4,12 @@ while inotifywait -e modify /var/www/masternodeprivkey/masternodeprivkey.txt; do
   USERNAME=$(pwgen -s 16 1)
   PASSWORD=$(pwgen -s 64 1)
   MASTERNODEPRIVKEY=$(</var/www/masternodeprivkey/masternodeprivkey.txt)
-  echo "rpcallowip=127.0.0.1">/root/dextro.conf
   echo "rpcuser=$USERNAME" >/root/dextro.conf
   echo "rpcpassword=$PASSWORD" >>/root/dextro.conf
   echo "server=1" >>/root/dextro.conf
   echo "listen=1" >>/root/dextro.conf
   echo "port=39320" >>/root/dextro.conf
-  echo "rpcport=4141" >>/root/dextro.conf
+  echo "rpcallowip=127.0.0.1" >>/root/dextro.conf
   echo "addnode=seed1.dextro.io" >>/root/dextro.conf
   echo "addnode=seed2.dextro.io" >>/root/dextro.conf
   echo "addnode=seed3.dextro.io" >>/root/dextro.conf
