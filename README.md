@@ -1,6 +1,6 @@
 # fork and credits go to CryptoHawaii Pepe/Meme Coin Docker 
 # original github: https://github.com/CryptoHawaii-com/pepecoin-Dockerfiles
-# Modified to work with Dextro ( Currently dextro(SLRC) community coin)
+# Modified to work with Dextro ( Currently dextro(DXO) coin)
 
 ### Details:
 Dextro Master Node - Ideally this is run on 2 CPU(s).
