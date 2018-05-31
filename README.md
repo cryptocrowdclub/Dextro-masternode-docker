@@ -136,7 +136,10 @@ LTC :
 ETH : 
 
 
-and ofcourse thanks go to the original script at: https://github.com/CryptoHawaii-com/pepecoin-Dockerfiles
+and ofcourse 
+thanks go:
+-to the original script at: https://github.com/CryptoHawaii-com/pepecoin-Dockerfiles
+-https://github.com/kwiksand. This container uses the cryptocoin-base container (https://quay.io/repository/kwiksand/cryptocoin-base) which installs ubuntu and all the bitcoin build dependencies (miniupnp, berkelyDB 4.8, system build tools, etc)
 
 
 
