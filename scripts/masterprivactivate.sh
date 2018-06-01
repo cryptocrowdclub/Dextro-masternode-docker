@@ -29,7 +29,7 @@ while inotifywait -e modify /var/www/masternodeprivkey/masternodeprivkey.txt; do
   docker commit dextromasternode dextromasternode
   docker container rm dextromasternode
   echo 'loading master node...'
-  docker run -d --restart always -p 39320:39320 --name dextromasternode dextromasternode /root/dextro/dextrod -daemon -datadir=/root/.dextro -conf=/root/.dextro/dextro.conf
+  docker run -d --restart always -p 39320:39320 --name dextromasternode dextromasternode /root/dextro/dextrod -datadir=/root/.dextro -conf=/root/.dextro/dextro.conf
   #docker stop dextromasternode
   docker start dextromasternode
   systemctl stop apache2
