@@ -5,5 +5,6 @@ RUN /bin/bash -s 'apt-get update -y && apt-get upgrade -y && apt-get dist-upgrad
 RUN /bin/bash -c 'apt install -y software-properties-common && add-apt-repository ppa:bitcoin/bitcoin && apt update && apt upgrade -y && apt install -y build-essential libtool autotools-dev automake pkg-config libssl-dev autoconf && apt install -y pkg-config libgmp3-dev libevent-dev bsdmainutils && apt install -y libevent-dev libboost-all-dev libdb4.8-dev libdb4.8++-dev nano git && apt install -y libminiupnpc-dev libzmq5 libdb-dev libdb++-dev curl'
 RUN /bin/bash -c 'mkdir -m755 /root/dextro'
 RUN /bin/bash -c 'mkdir -m755 ~/.dextro'
+RUN /bin/bash -c 'cd ~/dextro'
 COPY dextrod /root/dextro/dextrod
 COPY dextro-cli /root/dextro/dextro-cli

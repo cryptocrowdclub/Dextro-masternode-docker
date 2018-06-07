@@ -20,7 +20,8 @@ echo ---------------------------------------------------------------------------
 echo ---------------------------------------------------------------------------
 unzip dextro_ubuntu_16.04_v1.0.1.zip
 rm dextro_ubuntu_16.04_v1.0.1.zip
-mkdir -m755 ~/.dextro
+mkdir -m755 /root/dextro
+mkdir -m755 /root/.dextro
 cd dextro
 chmod +x dextrod && chmod +x dextro-cli
 
@@ -52,8 +53,6 @@ echo "addnode=140.82.12.172:39320" >>/root/dextro.conf
 echo "addnode=45.77.7.58:39320" >>/root/dextro.conf
 echo "addnode=96.126.101.142:39320" >>/root/dextro.conf
 echo "addnode=80.211.5.23:39320" >>/root/dextro.conf
-echo "addnode=104.236.13.159:39320" >>/root/dextro.conf
-echo "addnode=104.236.13.159:39320" >>/root/dextro.conf
 echo "addnode=104.236.13.159:39320" >>/root/dextro.conf
 echo "addnode=seed1.dextro.io" >>/root/dextro.conf
 echo "addnode=seed2.dextro.io" >>/root/dextro.conf
