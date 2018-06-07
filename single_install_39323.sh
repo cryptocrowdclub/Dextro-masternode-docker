@@ -64,7 +64,7 @@ echo "addnode=seed6.dextro.io" >>/root/dextro.conf
 echo "addnode=seed7.dextro.io" >>/root/dextro.conf
 echo "addnode=seed8.dextro.io" >>/root/dextro.conf
 echo "maxconnections=16" >>/root/dextro.conf
-echo "masternodeprivkey=$MASTERNODEPRIVKEY" >>/root/dextro.conf
+echo "masternodeprivkey=6JsDDaoByqjci54af6t2fWP6k7qK44JCpsJ7Bgj6YSVUbJfHSVT" >>/root/dextro.conf
 echo "masternode=1" >>/root/dextro.conf
 echo "masternodeaddr=$IP:39323" >>/root/dextro.conf
 #docker stop dextromasternode
