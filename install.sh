@@ -18,8 +18,7 @@ ufw default allow outgoing
 ufw default deny incoming
 ufw allow ssh/tcp
 ufw limit ssh/tcp
-ufw allow 4848/tcp
-ufw allow 4141/tcp
+ufw allow 39320/tcp
 ufw logging on
 ufw --force enable
 

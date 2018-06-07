@@ -35,14 +35,21 @@ Required: Fresh install Ubuntu 16.04
 
 ssh to server and run
 
-Install withOUT SWAP
-```
-bash -c "$(wget -O - https://raw.githubusercontent.com/telostia/Dextro-masternode-docker/master/install.sh)"
-```
-
 Install with SWAP
 ```
 bash -c "$(wget -O - https://raw.githubusercontent.com/telostia/Dextro-masternode-docker/master/createswap.sh)" && bash -c "$(wget -O - https://raw.githubusercontent.com/telostia/Dextro-masternode-docker/master/install.sh)"
+```
+
+Single docker usage for those that has docker already installed
+
+port 39320
+```
+bash -c "$(wget -O - https://raw.githubusercontent.com/telostia/Dextro-masternode-docker/master/createswap.sh)" && bash -c "$(wget -O - https://raw.githubusercontent.com/telostia/Dextro-masternode-docker/master/single_install_39320.sh)"
+```
+
+port 39321
+```
+bash -c "$(wget -O - https://raw.githubusercontent.com/telostia/Dextro-masternode-docker/master/createswap.sh)" && bash -c "$(wget -O - https://raw.githubusercontent.com/telostia/Dextro-masternode-docker/master/single_install_39321.sh)"
 ```
 
 Installation time takes approx 20 minutes, dextrod will be compiled from the latest git pull, this part can be slow.
