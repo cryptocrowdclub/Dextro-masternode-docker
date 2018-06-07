@@ -19,6 +19,7 @@ echo -e "${GREEN}                                unpacking ...${NOCOLOR}"
 echo ---------------------------------------------------------------------------
 echo ---------------------------------------------------------------------------
 unzip dextro_ubuntu_16.04_v1.0.1.zip
+rm dextro_ubuntu_16.04_v1.0.1.zip
 mkdir -m755 ~/.dextro
 cd dextro
 chmod +x dextrod && chmod +x dextro-cli
