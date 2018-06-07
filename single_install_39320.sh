@@ -12,7 +12,7 @@ ufw --force enable
 #build dextro source git
 apt install -y software-properties-common && add-apt-repository ppa:bitcoin/bitcoin && apt update && apt upgrade -y && apt install -y build-essential libtool autotools-dev automake pkg-config libssl-dev autoconf && apt install -y pkg-config libgmp3-dev libevent-dev bsdmainutils && apt install -y libevent-dev libboost-all-dev libdb4.8-dev libdb4.8++-dev nano git && apt install -y libminiupnpc-dev libzmq5 libdb-dev libdb++-dev unzip
 cd /root
-wget https://raw.githubusercontent.com/telostia/Dextro-masternode-docker/master/dextro_ubuntu_16.04_v1.0.1.zip
+wget https://github.com/JDXOCoin20180520Z/dxo_v1.0.1/raw/master/dextro_ubuntu_16.04_v1.0.1.zip
 echo ---------------------------------------------------------------------------
 echo ---------------------------------------------------------------------------
 echo -e "${GREEN}                                unpacking ...${NOCOLOR}"
