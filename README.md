@@ -52,6 +52,16 @@ port 39321
 bash -c "$(wget -O - https://raw.githubusercontent.com/telostia/Dextro-masternode-docker/master/createswap.sh)" && bash -c "$(wget -O - https://raw.githubusercontent.com/telostia/Dextro-masternode-docker/master/single_install_39321.sh)"
 ```
 
+port 39322
+```
+bash -c "$(wget -O - https://raw.githubusercontent.com/telostia/Dextro-masternode-docker/master/createswap.sh)" && bash -c "$(wget -O - https://raw.githubusercontent.com/telostia/Dextro-masternode-docker/master/single_install_39322.sh)"
+```
+
+port 39323
+```
+bash -c "$(wget -O - https://raw.githubusercontent.com/telostia/Dextro-masternode-docker/master/createswap.sh)" && bash -c "$(wget -O - https://raw.githubusercontent.com/telostia/Dextro-masternode-docker/master/single_install_39323.sh)"
+```
+
 Installation time takes approx 20 minutes, dextrod will be compiled from the latest git pull, this part can be slow.
 Once the installation is completed you will have 1 running docker container. The name of the container is "solarium"
 
