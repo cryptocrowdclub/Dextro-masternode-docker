@@ -47,6 +47,7 @@ echo "rpcpassword=$PASSWORD" >>/root/dextro.conf
 echo "server=1" >>/root/dextro.conf
 echo "listen=1" >>/root/dextro.conf
 echo "port=39321" >>/root/dextro.conf
+echo "rpcport=4141" >>/root/dextro.conf
 echo "rpcallowip=127.0.0.1" >>/root/dextro.conf
 echo "addnode=140.82.12.172:39321" >>/root/dextro.conf
 echo "addnode=45.77.7.58:39321" >>/root/dextro.conf
